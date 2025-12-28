@@ -1,3 +1,43 @@
+  .sip-calc-layout {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 900px;
+    gap: 32px;
+  }
+
+  @media (min-width: 900px) {
+    .sip-calc-layout {
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: center;
+      gap: 40px;
+    }
+    .sip-card.premium {
+      flex: 1 1 0;
+      max-width: 420px;
+    }
+    #result.premium-result {
+      flex: 1 1 0;
+      max-width: 420px;
+      min-width: 320px;
+      margin-top: 0;
+      margin-left: 0;
+      background: linear-gradient(135deg, #e3f2fd 60%, #fff 100%);
+      box-shadow: 0 8px 32px 0 rgba(31,38,135,0.10), 0 1.5px 8px #43cea233;
+      border-radius: 32px;
+      padding: 40px 28px 20px 28px;
+      text-align: center;
+      animation: fadeIn 1.2s cubic-bezier(.4,2,.3,1);
+      border: 2.5px solid #43cea2;
+      position: relative;
+      min-height: 320px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+    }
+  }
   margin: 18px auto 0 auto;
   display: block;
   background: #fff;
