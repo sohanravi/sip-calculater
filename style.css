@@ -348,6 +348,11 @@ html, body {
   transition: background 0.2s, color 0.2s, transform 0.2s;
   letter-spacing: 1px;
   outline: none;
+  width: 100%;
+  max-width: 320px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 .premium-btn:hover, .premium-btn:focus {
   background: linear-gradient(90deg,#1976d2,#43cea2);
