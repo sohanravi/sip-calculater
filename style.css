@@ -461,12 +461,54 @@ footer {
   font-weight: 700;
   letter-spacing: 1px;
 }
-@media (max-width: 600px) {
-  .sip-card {
-    padding: 18px 6px 10px 6px;
+@media (max-width: 900px) {
+  .sip-calc-layout {
+    flex-direction: column;
+    gap: 18px;
+    max-width: 100vw;
+    width: 100vw;
+    align-items: stretch;
+  }
+  .sip-card.premium {
     max-width: 98vw;
+    width: 100vw;
+    padding: 18px 6px 10px 6px;
+    border-radius: 18px;
+    font-size: 1rem;
+  }
+  #result.premium-result {
+    max-width: 98vw;
+    width: 100vw;
+    margin: 0 auto 12px auto;
+    border-radius: 18px;
+    padding: 18px 6px 10px 6px;
+    min-height: 0;
+    font-size: 1rem;
   }
   .container {
     padding: 0 2vw;
+  }
+  .premium-title {
+    font-size: 1.4rem;
+  }
+  .premium-btn, .advanced-toggle, .reset-btn {
+    font-size: 1rem;
+    padding: 10px 0;
+    max-width: 98vw;
+  }
+  .simple-details .sub, .goal-label {
+    font-size: 0.98rem;
+    min-width: 0;
+  }
+  .goal-bar-bg {
+    max-width: 98vw;
+    height: 12px;
+  }
+  .advanced-title {
+    font-size: 1.05rem;
+    margin: 12px 0 8px 0;
+  }
+  label, input[type="number"], select, input[type="text"] {
+    font-size: 0.98rem;
   }
 }
