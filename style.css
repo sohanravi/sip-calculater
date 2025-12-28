@@ -196,8 +196,11 @@ body {
   width: 100vw;
   min-height: 90vh;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
+  box-sizing: border-box;
+  padding: 0;
+  overflow-x: hidden;
 }
 .sip-card.premium {
   background: #fff;
@@ -468,40 +471,46 @@ footer {
     max-width: 100vw;
     width: 100vw;
     align-items: stretch;
+    box-sizing: border-box;
+    padding: 0 0 24px 0;
   }
   .sip-card.premium {
-    max-width: 98vw;
+    max-width: 100vw;
     width: 100vw;
-    padding: 18px 6px 10px 6px;
-    border-radius: 18px;
+    padding: 18px 8px 10px 8px;
+    border-radius: 14px;
     font-size: 1rem;
+    box-sizing: border-box;
   }
   #result.premium-result {
-    max-width: 98vw;
+    max-width: 100vw;
     width: 100vw;
     margin: 0 auto 12px auto;
-    border-radius: 18px;
-    padding: 18px 6px 10px 6px;
+    border-radius: 14px;
+    padding: 18px 8px 10px 8px;
     min-height: 0;
     font-size: 1rem;
+    box-sizing: border-box;
   }
   .container {
-    padding: 0 2vw;
+    padding: 0;
+    box-sizing: border-box;
   }
   .premium-title {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
   }
   .premium-btn, .advanced-toggle, .reset-btn {
     font-size: 1rem;
     padding: 10px 0;
-    max-width: 98vw;
+    max-width: 100vw;
+    box-sizing: border-box;
   }
   .simple-details .sub, .goal-label {
     font-size: 0.98rem;
     min-width: 0;
   }
   .goal-bar-bg {
-    max-width: 98vw;
+    max-width: 100vw;
     height: 12px;
   }
   .advanced-title {
