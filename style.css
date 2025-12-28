@@ -524,6 +524,7 @@ label {
 }
 input[type="number"], input[type="text"], select {
   width: 100%;
+  max-width: 100%;
   padding: 11px 14px;
   border-radius: 10px;
   border: 1.5px solid #bdbdbd;
@@ -534,6 +535,8 @@ input[type="number"], input[type="text"], select {
   background: rgba(255,255,255,0.85);
   font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
   box-shadow: 0 1px 4px #1976d211;
+  box-sizing: border-box;
+  overflow-wrap: break-word;
 }
 input[type="number"]:focus, input[type="text"]:focus, select:focus {
   border: 1.5px solid #43cea2;
@@ -592,11 +595,12 @@ footer {
     max-width: 370px;
     width: 96vw;
     margin: 18px auto 0 auto;
-    padding: 18px 10px 10px 10px;
+    padding: 18px 4vw 10px 4vw;
     border-radius: 16px;
     font-size: 1rem;
     box-sizing: border-box;
     background: rgba(255,255,255,0.92);
+    overflow-x: hidden;
   }
   #result.premium-result {
     max-width: 370px;
@@ -636,5 +640,14 @@ footer {
   }
   label, input[type="number"], select, input[type="text"] {
     font-size: 0.98rem;
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow-wrap: break-word;
+  }
+  #advancedSection, #advancedForm {
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow-wrap: break-word;
+    overflow-x: hidden;
   }
 }
