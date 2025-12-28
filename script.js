@@ -150,17 +150,20 @@ document.getElementById('sipForm').addEventListener('submit', function(e) {
       ${volatilityHtml}
       <div class="note">All calculations are estimates. Please consult a financial advisor before investing.</div>
     </div>
-    <button id="resetBtn" class="reset-btn">Reset</button>
   `;
 
-  document.getElementById('resetBtn').onclick = function() {
-    // Reset all form fields (simple and advanced)
-    document.getElementById('sipForm').reset();
-    if (document.getElementById('advancedForm')) document.getElementById('advancedForm').reset();
-    // Hide result
-    document.getElementById('result').innerHTML = '';
-    // Hide inflation and volatility boxes
-    document.getElementById('inflationBox').style.display = 'none';
-    if (document.getElementById('volatilityBox')) document.getElementById('volatilityBox').style.display = 'none';
-  };
+  // Always set/reset the reset button event (for both form and result)
+  function setResetHandler() {
+    const resetBtn = document.getElementById('resetBtn');
+    if (resetBtn) {
+      resetBtn.onclick = function() {
+        document.getElementById('sipForm').reset();
+        if (document.getElementById('advancedForm')) document.getElementById('advancedForm').reset();
+        document.getElementById('result').innerHTML = '';
+        document.getElementById('inflationBox').style.display = 'none';
+        if (document.getElementById('volatilityBox')) document.getElementById('volatilityBox').style.display = 'none';
+      };
+    }
+  }
+  setResetHandler();
 });

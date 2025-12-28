@@ -30,28 +30,31 @@
     font-weight: 700;
     letter-spacing: 0.2px;
   }
-  .result-value {
-    font-size: 1.18em;
-    font-weight: 900;
-    letter-spacing: 0.5px;
-  }
-  .result-value.invest {
-    color: #43cea2;
-  }
-  .result-value.interest {
+  .reset-btn, .form-reset-btn {
+    margin: 10px auto 0 auto;
+    display: block;
+    background: linear-gradient(90deg,#fff,#e0e7ff 80%);
     color: #1976d2;
-  }
-  .result-value.value {
-    color: #222;
-  }
-  .sip-calc-layout {
-    display: flex;
-    flex-direction: column;
+    border: 2px solid #43cea2;
+    border-radius: 14px;
+    padding: 13px 0;
+    font-size: 1.08rem;
+    font-weight: 800;
+    cursor: pointer;
     width: 100%;
-    max-width: 900px;
-    gap: 32px;
+    max-width: 320px;
+    box-shadow: 0 2px 12px #43cea233;
+    transition: background 0.2s, color 0.2s, transform 0.2s, border 0.2s;
+    letter-spacing: 1px;
+    outline: none;
   }
-
+  .reset-btn:hover, .form-reset-btn:hover, .reset-btn:focus, .form-reset-btn:focus {
+    background: linear-gradient(90deg,#43cea2,#1976d2);
+    color: #fff;
+    border: 2px solid #1976d2;
+    transform: scale(1.045);
+    box-shadow: 0 4px 24px #43cea244;
+  }
   @media (min-width: 900px) {
     .sip-calc-layout {
       flex-direction: row;
