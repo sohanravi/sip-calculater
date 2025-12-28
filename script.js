@@ -129,10 +129,22 @@ document.getElementById('sipForm').addEventListener('submit', function(e) {
     volatilityHtml = `<div class="sub" style="color:#b22222;">Market Simulation: <br>Best: <b>₹${best.toLocaleString(undefined, {maximumFractionDigits:0})}</b> | Avg: <b>₹${avg.toLocaleString(undefined, {maximumFractionDigits:0})}</b> | Worst: <b>₹${worst.toLocaleString(undefined, {maximumFractionDigits:0})}</b></div>`;
   }
   document.getElementById('result').innerHTML = `
-    <div class="simple-details">
-      <div class="sub" style="color:#43cea2;">Total Investment: <b>₹${totalInvested.toLocaleString(undefined, {maximumFractionDigits:0})}</b></div>
-      <div class="sub" style="color:#1976d2;">Total Interest: <b>₹${(futureValue-totalInvested).toLocaleString(undefined, {maximumFractionDigits:0})}</b></div>
-      <div class="sub" style="color:#222;">Total Value: <b>₹${futureValue.toLocaleString(undefined, {maximumFractionDigits:0})}</b></div>
+    <div class="result-premium-card">
+      <div class="result-row">
+        <span class="result-icon invest">💸</span>
+        <span class="result-label">Total Investment</span>
+        <span class="result-value invest">₹${totalInvested.toLocaleString(undefined, {maximumFractionDigits:0})}</span>
+      </div>
+      <div class="result-row">
+        <span class="result-icon interest">📈</span>
+        <span class="result-label">Total Interest</span>
+        <span class="result-value interest">₹${(futureValue-totalInvested).toLocaleString(undefined, {maximumFractionDigits:0})}</span>
+      </div>
+      <div class="result-row">
+        <span class="result-icon value">🏦</span>
+        <span class="result-label">Total Value</span>
+        <span class="result-value value">₹${futureValue.toLocaleString(undefined, {maximumFractionDigits:0})}</span>
+      </div>
       ${taxHtml}
       ${goalHtml}
       ${volatilityHtml}
