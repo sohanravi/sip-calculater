@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Attractive SIP Calculator | Powered by Marketyog</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="sip-card premium">
+      <h1 class="premium-title">SIP Calculator</h1>
+      <p class="tagline premium-tagline">Plan your wealth, step by step</p>
+      <div class="powered-by-below">
+        <span class="powered-by"><img src="https://img.icons8.com/color/32/000000/rocket--v2.png" style="vertical-align:middle;margin-right:6px;">Powered by <b>Marketyog</b></span>
+      </div>
+      <form id="sipForm">
+        <label>Monthly SIP Amount (₹):<input type="number" id="amount" min="100" value="10000" required></label>
+        <label>Expected Return Rate (%):<input type="number" id="rate" min="1" max="30" value="12" required></label>
+        <label>Investment Duration (Years):<input type="number" id="years" min="1" max="50" value="10" required></label>
+        <label>Step-up Amount (₹):<input type="number" id="stepUp" min="0" value="0"></label>
+        <label><input type="checkbox" id="showInflation"> Adjust for Inflation</label>
+        <div id="inflationBox" style="display:none;">
+          <label>Inflation Rate (%):<input type="number" id="inflation" min="0" max="20" value="0"></label>
+        </div>
+        <button type="submit" class="premium-btn">Calculate</button>
+      </form>
+      <button id="toggleAdvanced" class="advanced-toggle">Show Advanced Features ▼</button>
+      <div id="advancedSection" style="display:none;">
+        <div class="advanced-title">Advance Features</div>
+        <form id="advancedForm" onsubmit="return false;">
+          <label>Goal Amount (₹):<input type="number" id="goalAmount" min="0" value="0" placeholder="Enter your goal (optional)"></label>
+          <label>Step-up Frequency:
+            <select id="stepUpFreq">
+              <option value="yearly">Yearly</option>
+              <option value="quarterly">Quarterly</option>
+              <option value="monthly">Monthly</option>
+            </select>
+          </label>
+          <label>Pause SIP (months, comma separated):
+            <input type="text" id="pauseMonths" placeholder="e.g. 5,6,7 for May, June, July">
+          </label>
+          <label>Investment Type for Tax:
+            <select id="invType">
+              <option value="none">None</option>
+              <option value="elss">ELSS (Equity Linked Savings Scheme)</option>
+              <option value="debt">Debt Fund</option>
+            </select>
+          </label>
+          <label>Tax Slab (%):<input type="number" id="taxSlab" min="0" max="40" value="0"></label>
+          <label>Simulate Market Volatility:
+            <input type="checkbox" id="volatilityCheck">
+          </label>
+          <div id="volatilityBox" style="display:none;">
+            <label>Volatility (%) (std dev):<input type="number" id="volatility" min="0" max="50" value="10"></label>
+          </div>
+        </form>
+      </div>
+      <div id="result" class="result premium-result">
+        <!-- Result will be injected here -->
+      </div>
+      <footer class="premium-footer">Premium SIP Experience</footer>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
