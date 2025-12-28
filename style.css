@@ -612,11 +612,12 @@ footer {
     box-sizing: border-box;
     background: rgba(255,255,255,0.92);
     overflow-x: hidden;
+    margin-bottom: 24px;
   }
   #result.premium-result {
     max-width: 370px;
     width: 96vw;
-    margin: 0 auto 12px auto;
+    margin: 24px auto 12px auto;
     border-radius: 16px;
     padding: 18px 10px 10px 10px;
     min-height: 0;
