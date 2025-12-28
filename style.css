@@ -1,4 +1,4 @@
-  .result-premium-card {
+.result-premium-card {
     display: flex;
     flex-direction: column;
     gap: 18px;
@@ -157,6 +157,9 @@
   background: #f7fafd;
   border-radius: 12px;
   box-shadow: 0 2px 8px #1976d211;
+  max-width: 100%;
+  box-sizing: border-box;
+  overflow-wrap: break-word;
 }
 .goal-progress {
   width: 100%;
@@ -502,6 +505,9 @@ form {
   flex-direction: column;
   gap: 16px;
   margin-bottom: 22px;
+  max-width: 100%;
+  box-sizing: border-box;
+  overflow-wrap: break-word;
 }
 label {
   display: flex;
@@ -512,6 +518,9 @@ label {
   font-weight: 600;
   margin-bottom: 2px;
   letter-spacing: 0.2px;
+  max-width: 100%;
+  box-sizing: border-box;
+  overflow-wrap: break-word;
 }
 input[type="number"], input[type="text"], select {
   width: 100%;
